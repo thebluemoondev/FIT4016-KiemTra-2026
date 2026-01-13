@@ -43,7 +43,6 @@ namespace SchoolManagementApi.Data
                       .OnDelete(DeleteBehavior.Cascade);
             });
 
-            // 3. Gọi phương thức Seed Data
             SeedData(modelBuilder);
         }
 
@@ -51,7 +50,6 @@ namespace SchoolManagementApi.Data
         {
             var staticDate = new DateTime(2026, 1, 13, 15, 0, 0);
 
-            // --- TẠO DỮ LIỆU THẬT CHO 10 TRƯỜNG HỌC ---
             modelBuilder.Entity<School>().HasData(
                 new School { Id = 1, Name = "FPT Polytechnic", Principal = "Vu Chi Thanh", Address = "Trinh Van Bo, Hanoi", CreatedAt = staticDate },
                 new School { Id = 2, Name = "Vinschool", Principal = "Phan Ha Thuy", Address = "Times City, Hanoi", CreatedAt = staticDate },
@@ -65,7 +63,6 @@ namespace SchoolManagementApi.Data
                 new School { Id = 10, Name = "VAS - Vietnam Australia School", Principal = "Marcel van Miert", Address = "Sala, HCM City", CreatedAt = staticDate }
             );
 
-            // --- TẠO DỮ LIỆU THẬT CHO 20 HỌC SINH ---
             modelBuilder.Entity<Student>().HasData(
                 new Student { Id = 1, SchoolId = 1, FullName = "Nguyen Van Anh", StudentId = "PH12345", Email = "anhnv@fpt.edu.vn", Phone = "0912345678", CreatedAt = staticDate },
                 new Student { Id = 2, SchoolId = 1, FullName = "Tran Thi Binh", StudentId = "PH12346", Email = "binhtt@fpt.edu.vn", Phone = "0922345678", CreatedAt = staticDate },
