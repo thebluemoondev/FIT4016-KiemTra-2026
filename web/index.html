@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management</h1>
+
+        <div class="action-bar">
+            <button id="btn-add" class="btn-main" onclick="openModal('add')">Add New Student</button>
+        </div>
+
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Student ID</th>
+                    <th>Email</th>
+                    <th>School</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="student-list"></tbody>
+        </table>
+    </div>
+
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Student Information</h2>
+            <form id="student-form">
+                <input type="hidden" id="student-id-pk">
+                <label>Full Name</label>
+                <input type="text" id="full-name" required>
+
+                <label>Student ID</label>
+                <input type="text" id="student-id-code" required>
+
+                <label>Email</label>
+                <input type="email" id="email" required>
+
+                <label>Phone</label>
+                <input type="text" id="phone">
+
+                <label>School</label>
+                <select id="school-id" required>
+                    <option value="">-- Select School --</option>
+                </select>
+
+                <div class="modal-footer">
+                    <button type="submit" id="btn-save" class="btn-main">Save Change</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="pagination-container" style="text-align: center; margin-top: 20px; padding-bottom: 20px;"></div>
+    <script src="script.js"></script>
+</body>
+</html>
