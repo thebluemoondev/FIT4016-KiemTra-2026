@@ -1,5 +1,5 @@
 // Cấu hình URL API
-const BASE_URL = "https://localhost:7012";
+const BASE_URL = "https://d1snf2t2-5095.asse.devtunnels.ms";
 const STUDENT_API = `${BASE_URL}/api/students`;
 
 // Dữ liệu Schools Hardcoded

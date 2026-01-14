@@ -41,8 +41,8 @@ namespace SchoolManagementApi
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            //app.UseHttpsRedirection();
             app.UseCors("AllowAll");
-            app.UseHttpsRedirection();
 
             app.UseAuthorization();
 

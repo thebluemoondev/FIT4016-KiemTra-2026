@@ -28,7 +28,6 @@ namespace SchoolManagementApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(StudentRequestDto dto)
         {
-            // Note: Validation is handled by Data Annotations in StudentRequestDto
             var student = new Student
             {
                 FullName = dto.FullName,
