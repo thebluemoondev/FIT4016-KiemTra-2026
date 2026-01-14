@@ -2,7 +2,7 @@
 const BASE_URL = "https://d1snf2t2-5095.asse.devtunnels.ms";
 const STUDENT_API = `${BASE_URL}/api/students`;
 
-// Dữ liệu Schools Hardcoded
+// Dữ liệu Schools Hard.coded
 const SCHOOLS_DATA = [
     { id: 1, name: "FPT Polytechnic" },
     { id: 2, name: "Vinschool" },
